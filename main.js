@@ -34,14 +34,53 @@ contact.addEventListener('click', (event)=>{
   scrollIntoView('#contact');
 });
 
-function scrollIntoView(selector){
-  const scrollTo=document.querySelector(selector);
-  scrollTo.scrollIntoView({behavior: 'smooth'});
-}
-
 //make home transparent
 const home=document.querySelector('.home_container');
 const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', ()=> {
   home.style.opacity = 1-window.scrollY / homeHeight;
 });
+
+//arrow-up button
+document.addEventListener('scroll', ()=>{
+  const arrowUp=document.querySelector('.arrow-up');
+if(window.scrollY > homeHeight /2 ){
+  arrowUp.classList.add('visible');
+}else {
+  arrowUp.classList.remove('visible');
+}
+});
+
+const arrowUp = document.querySelector('.arrow-up');
+arrowUp.addEventListener('click', ()=>{
+  scrollIntoView('#home');
+})
+
+// Projects
+const workBtnContainer = document.querySelector('.work_categories');
+const projectContainer = document.querySelector('.work_projects');
+const projects = document.querySelectorAll('.project');
+workBtnContainer.addEventListener('click', (e)=>{
+  const filter= e.target.dataset.filter || e.target.parentNode.dataset.filter;
+  if(filter == null){
+    return; 
+  }
+  projectContainer.classList.add('anime-out');
+  setTimeout(()=>{
+    projects.forEach((project)=>{
+      //console.log(project.dataset.type);
+      if(filter === '*' || filter === project.dataset.type){
+        project.classList.remove('invisible');
+      }else{
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anime-out');
+  }, 300);
+
+});
+
+function scrollIntoView(selector){
+  const scrollTo=document.querySelector(selector);
+  scrollTo.scrollIntoView({behavior: 'smooth'});
+}
