@@ -110,7 +110,7 @@ p{
 
 #navbar.navbar--dark{
   background-color: var(--color-violet);
-  padding: 8px;
+  padding: 16px;
 
 }
 .navbar_menu{
@@ -383,18 +383,18 @@ transition: var(--animation-duration);
   transform: translateX(0px);
 }
 .project_description h3{
-  color: var(--color-white);
+  color: var(--color-orange);
 }
 .project_description h3:after{
   content: '';
   left: 50%;
-  width: 25px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-dark-white);
   display: block;
   position: relative;
-  margin-left: -12px;
   margin-top: 8px;
+  transform: translateX(-50%);
 }
 
 /* Contact */
