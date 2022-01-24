@@ -12,7 +12,11 @@ document.addEventListener('scroll', ()=> {
     navbar.classList.remove('navbar--dark');
   }
 })
-
+// navbar toggle 
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
+});
 //navbar scrolling
 
 const navbarMenu = document.querySelector('.navbar_menu');
@@ -23,6 +27,8 @@ navbarMenu.addEventListener('click', (event) => {
   if(link == null){
     return; 
   }
+  navbarMenu.classList.remove('open');
+  scrollIntoView(link);
 
   //console.log(event.target.dataset.link);
   scrollIntoView(link);
@@ -65,6 +71,12 @@ workBtnContainer.addEventListener('click', (e)=>{
   if(filter == null){
     return; 
   }
+  // remove selection 
+  const active = document.querySelector('.category_btn.selected');
+  active.classList.remove('selected');
+  const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+
   projectContainer.classList.add('anime-out');
   setTimeout(()=>{
     projects.forEach((project)=>{

@@ -21,15 +21,17 @@
             <i class="fas fa-atlas"></i>
             <a href="#">SERAN</a>
         </div>
-        <div class="navbar_menu">
-            <ul class="navbar_menu">
-                <li class="navbar_menu_items active" data-link="#home">Home</li>
-                <li class="navbar_menu_items" data-link="#about">About</li>
-                <li class="navbar_menu_items" data-link="#skills">Skills</li>
-                <li class="navbar_menu_items" data-link="#work">My Work</li>
-                <li class="navbar_menu_items" data-link="#contact">Contact</li>
-            </ul>  
-        </div>  
+        <ul class="navbar_menu">
+            <li class="navbar_menu_items active" data-link="#home">Home</li>
+            <li class="navbar_menu_items" data-link="#about">About</li>
+            <li class="navbar_menu_items" data-link="#skills">Skills</li>
+            <li class="navbar_menu_items" data-link="#work">My Work</li>
+            <li class="navbar_menu_items" data-link="#contact">Contact</li>
+        </ul>  
+        <!-- Toggle btn-->
+        <button class="navbar_toggle_btn">
+            <i class="fas fa-bars"></i>
+        </button>
     </nav>
 
     <!-- Home-->
@@ -192,7 +194,7 @@
         <h1>My Work</h1>
         <h3>Project</h3>
         <div class="work_categories">
-            <button class="category_btn active" data-filter="*">
+            <button class="category_btn selected" data-filter="*">
                 All<span class="category_count">7</span>
             </button>
             <button class="category_btn" data-filter="front-end">
