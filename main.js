@@ -18,7 +18,6 @@ navbarToggleBtn.addEventListener('click', () => {
   navbarMenu.classList.toggle('open');
 });
 //navbar scrolling
-
 const navbarMenu = document.querySelector('.navbar_menu');
 navbarMenu.addEventListener('click', (event) => {
   //console.log(event.target.dataset.link);
@@ -31,7 +30,7 @@ navbarMenu.addEventListener('click', (event) => {
   scrollIntoView(link);
 
   //console.log(event.target.dataset.link);
-  scrollIntoView(link);
+  //scrollIntoView(link);
 });
 
 //contact me move
