@@ -162,7 +162,9 @@ p{
   border: 2px solid var(--color-light-white);
 }
 
-.home_title, 
+.home_title{
+  color:var(--color-light-grey);
+}
 .home_description{
   color:var(--color-white);
 }
@@ -281,7 +283,7 @@ transition: var(--animation-duration);
 .skill_value{
   width: 100%;
   height: 3px;
-  background-color: var(--color-orange);
+  background-color: var(--color-dark-sky);
 }
 .skillset_right{
   flex-basis: 40%;
