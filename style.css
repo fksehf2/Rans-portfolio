@@ -341,7 +341,7 @@ transition: var(--animation-duration);
 }
 
 .work_projects{
-  display: flex;
+  display: inline-flex;
   flex-wrap: wrap;
   justify-content: center;
   opacity: 1;
